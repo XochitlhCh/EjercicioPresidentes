@@ -1,0 +1,79 @@
+﻿@using EjercicioPresidentes.Models.ViewModels
+@model IndexViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="estilos.css" rel="stylesheet" />
+    <title>Presidentes</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo-mexico.png" />
+        <p><a href="index.html">Presidentes de la República</a></p>
+    </header>
+    <main>
+        <div class="imagenes">
+            <ul>
+                @foreach (var p in Model.Presidentes)
+                {
+                    <li>
+                        <a href="biografia.html">
+                            <img src= "~/presidentes/@(p.Id).jpg">
+                            <p>
+                                @p.Nombre
+                                <br>@p.Periodo
+
+                            </p>
+                        </a>
+                    </li>
+                }
+
+@*                 <li>
+                    <a href="biografia.html">
+                        <img src="presidentes/32.jpg">
+                        <p>
+                            Benito Pablo Juárez García
+                            <br>2012-2018
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="biografia.html">
+                        <img src="presidentes/32.jpg">
+                        <p>
+                            Benito Pablo Juárez García
+                            <br>2012-2018
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="biografia.html">
+                        <img src="presidentes/32.jpg">
+                        <p>
+                            Benito Pablo Juárez García
+                            <br>2012-2018
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="biografia.html">
+                        <img src="presidentes/32.jpg">
+                        <p>
+                            Benito Pablo Juárez García
+                            <br>2012-2018
+                        </p>
+                    </a>
+                </li> *@
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Programación Web - Unidad 2</p>
+            <img class="logo" src="images/logo-mexico.png" />
+        </div>
+    </footer>
+</body>
+</html>
